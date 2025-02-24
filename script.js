@@ -98,7 +98,8 @@ document.body.appendChild(h3)
 let toggle = false
 let count = 0
 const button = document.getElementById("button")
-button.addEventListener("click", function() {
+
+function interact() {
     const div = document.getElementById("body text")
     toggle = !toggle
     if (toggle) {
@@ -114,7 +115,8 @@ button.addEventListener("click", function() {
     else {
         button.textContent = `Clicked ${count} time`
     }
-} )
+} 
+button.addEventListener("click",interact)
 
 // playGame()
 // don't use innerHTML in javascript, use textContent
