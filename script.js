@@ -1,5 +1,3 @@
-
-
 function getHumanChoice(input) {
     if (input === "rock") {
         return 0;
@@ -71,4 +69,52 @@ function playGame() {
         alert("Looks like its a tie bucko. Peepee");
     }
 }
-playGame()
+
+const p = document.createElement("p");
+p.style.color = "red"
+p.textContent = "Hey I'm red!"
+
+const h3 = document.createElement("h3")
+
+h3.style.color = "blue"
+h3.textContent = "I'm a blue h3"
+
+const div = document.createElement("div")
+div.style.backgroundColor= "pink"
+div.style.borderColor = "black"
+
+const h1 = document.createElement("h1")
+const innerP = document.createElement('p')
+innerP.textContent ="ME TOO!"
+h1.textContent ="I'm a div"
+
+div.appendChild(h1)
+div.appendChild(innerP)
+document.body.appendChild(div)
+
+
+document.body.appendChild(p)
+document.body.appendChild(h3)
+let toggle = false
+let count = 0
+const button = document.getElementById("button")
+button.addEventListener("click", function() {
+    const div = document.getElementById("body text")
+    toggle = !toggle
+    if (toggle) {
+        div.textContent = "button clicked content"
+    }
+    else {
+        div.textContent = "This is the glorious text-content!"
+    }
+    count++
+    if (count > 1) {
+        button.textContent = `Clicked ${count} times`
+    }
+    else {
+        button.textContent = `Clicked ${count} time`
+    }
+} )
+
+// playGame()
+// don't use innerHTML in javascript, use textContent
